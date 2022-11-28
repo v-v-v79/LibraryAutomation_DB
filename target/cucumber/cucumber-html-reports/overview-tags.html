@@ -48,12 +48,12 @@ $(document).ready(function() {
 $(document).ready(function() {
 
     var chartData = {
-        labels:  [ "@wip", ] ,
+        labels:  [ "@snippets", ] ,
         datasets: [
             {
                 label: "Passed",
                 backgroundColor: "#92DD96",
-                data:  [ 100.00, ] 
+                data:  [ 0.00, ] 
             },
             {
                 label: "Failed",
@@ -63,7 +63,7 @@ $(document).ready(function() {
             {
                 label: "Skipped",
                 backgroundColor: "#8AF",
-                data:  [ 0.00, ] 
+                data:  [ 75.00, ] 
             },
             {
                 label: "Pending",
@@ -73,7 +73,7 @@ $(document).ready(function() {
             {
                 label: "Undefined",
                 backgroundColor: "#F5B975",
-                data:  [ 0.00, ] 
+                data:  [ 25.00, ] 
             }
         ]
     };
@@ -133,7 +133,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>28 Nov 2022, 00:01</td>
+      <td>28 Nov 2022, 10:02</td>
     </tr>
   </tbody>
 </table>
@@ -195,54 +195,54 @@ $(document).ready(function() {
 
   <tbody>
       <tr>
-        <td class="tagname"><a href="report-tag_2149507997.html">@wip</a></td>
+        <td class="tagname"><a href="report-tag_2948330293.html">@snippets</a></td>
 
-        <td      class="passed"    >12</td>
         <td >0</td>
         <td >0</td>
+        <td     class="skipped"   >3</td>
         <td >0</td>
-        <td >0</td>
-        <td class="total">12</td>
-
-        <td  class="passed"    >4</td>
-        <td >0</td>
+        <td   class="undefined" >1</td>
         <td class="total">4</td>
 
-        <td class="duration" data-value="26032663000">26.032</td>
-        <td class="passed">Passed</td>
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="1174000">0.001</td>
+        <td class="failed">Failed</td>
       </tr>
   </tbody>
 
   <tfoot class="total">
     <tr>
       <td></td>
-      <td>12</td>
       <td>0</td>
       <td>0</td>
+      <td>3</td>
       <td>0</td>
-      <td>0</td>
-      <td>12</td>
-
-      <td>4</td>
-      <td>0</td>
+      <td>1</td>
       <td>4</td>
 
-      <td class="duration">26.032</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+
+      <td class="duration">0.001</td>
       <td>1</td>
     </tr>
     <tr>
       <td></td>
-      <td>100.00%</td>
       <td>0.00%</td>
       <td>0.00%</td>
+      <td>75.00%</td>
       <td>0.00%</td>
-      <td>0.00%</td>
+      <td>25.00%</td>
       <td></td>
-      <td>100.00%</td>
       <td>0.00%</td>
-      <td></td>
-      <td></td>
       <td>100.00%</td>
+      <td></td>
+      <td></td>
+      <td>0.00%</td>
     </tr>
   </tfoot>
 </table>

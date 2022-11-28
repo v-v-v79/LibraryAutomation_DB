@@ -5,6 +5,7 @@ import com.LibraryCT.utility.Config;
 import com.LibraryCT.utility.DB_Util;
 import com.LibraryCT.utility.Driver;
 import io.cucumber.java.After;
+import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
@@ -15,8 +16,6 @@ public class Hooks {
 
     @Before
     public void setUp() {
-        DB_Util.createConnection(Config.getProperty("db_url"),
-                Config.getProperty("db_username"), Config.getProperty("db_password"));
         Driver.getDriver();
     }
 
@@ -29,6 +28,16 @@ public class Hooks {
             scenario.attach(screenshot, "image/png", scenario.getName());
         }
         Driver.closeDriver();
+    }
+
+    @Before("@db") // custom tag
+    public void db_connection_setUp() {
+        DB_Util.createConnection(Config.getProperty("db_url"),
+                Config.getProperty("db_username"), Config.getProperty("db_password"));
+    }
+
+    @After("@db")
+    public void db_connection_tearDown() {
         DB_Util.destroy();
     }
 }
