@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: As a data consumer, I want UI and DB book categories are match.
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 35.374 s - in As a data consumer, I want UI and DB book categories are match.
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 29.821 s - in As a data consumer, I want UI and DB book categories are match.

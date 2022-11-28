@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: As a librarian, I want to know borrowed books number
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 32.899 s - in As a librarian, I want to know borrowed books number
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 24.699 s - in As a librarian, I want to know borrowed books number

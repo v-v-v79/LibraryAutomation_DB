@@ -1,10 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="0.369">
-    <testcase classname="As a data consumer, I want UI and DB book information are match." name="Verify book information with DB" time="0.038">
-        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given I login as "librarian"................................................undefined
-When I navigate to "Books" page.............................................skipped
-When I open book "Chordeiles minor".........................................skipped
-Then book information must match the Database...............................skipped
-]]></failure>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="29.955">
+    <testcase classname="As a data consumer, I want the user information are stored in mySql DB correctly in users table." name="verify users has unique IDs" time="13.052">
+        <system-out><![CDATA[When Execute query to get all IDs from users................................passed
+Then verify all users has unique ID.........................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="As a data consumer, I want the user information are stored in mySql DB correctly in users table." name="verify users table columns" time="4.192">
+        <system-out><![CDATA[When Execute query to get all columns.......................................passed
+Then verify the below columns are listed in result..........................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="As a librarian, I want to know borrowed books number" name="verify the total amount of borrowed books" time="24.555">
+        <system-out><![CDATA[Given user login as a "librarian"...........................................passed
+When user take borrowed books number........................................passed
+Then borrowed books number information must match with DB...................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="As a data consumer, I want UI and DB book categories are match." name="verify book categories with DB" time="29.666">
+        <system-out><![CDATA[Given I login as a "librarian"..............................................passed
+When I navigate to Books page...............................................passed
+And I take all book categories in UI........................................passed
+And I execute query to get book categories..................................passed
+Then verify book categories must match book_categories table from db........passed
+]]></system-out>
     </testcase>
 </testsuite>

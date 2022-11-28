@@ -1,5 +1,6 @@
 @snippets
 Feature: As a data consumer, I want UI and DB book information are match.
+
   Scenario: Verify book information with DB
     Given I login as "librarian"
     When I navigate to "Books" page

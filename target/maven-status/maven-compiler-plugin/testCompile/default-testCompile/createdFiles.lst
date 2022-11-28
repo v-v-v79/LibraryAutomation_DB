@@ -1,3 +1,4 @@
+com/LibraryCT/step_definitions/US_4_Steps.class
 com/LibraryCT/pages/BooksPage.class
 com/LibraryCT/pages/LoginPage.class
 com/LibraryCT/utility/DB_Util.class

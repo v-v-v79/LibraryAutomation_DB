@@ -36,7 +36,7 @@ public class Hooks {
                 Config.getProperty("db_username"), Config.getProperty("db_password"));
     }
 
-    @After("@db")
+    @After("@bd")
     public void db_connection_tearDown() {
         DB_Util.destroy();
     }
