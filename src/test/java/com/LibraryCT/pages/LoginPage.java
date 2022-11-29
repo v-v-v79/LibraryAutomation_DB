@@ -14,16 +14,19 @@ public class LoginPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
     @FindBy(css = "[id='inputEmail']")
-    public WebElement username;
+    private WebElement username;
 
     @FindBy(css = "[id='inputPassword']")
-    public WebElement password;
+    private WebElement password;
 
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement signIn;
 
     @FindBy(id = "user_avatar")
     public WebElement userIcon;
+
+    @FindBy(xpath = "//a[@id='navbarDropdown']//span")
+    public WebElement accountHolderName;
 
     @FindBy(xpath = "//a[.='Log Out']")
     public WebElement logOutBtn;
@@ -33,6 +36,15 @@ public class LoginPage {
         BrowserUtils.waitForPageToLoad(30);
         username.sendKeys(Config.getProperty(user));
         password.sendKeys(Config.getProperty(user + "_password"));
+        signIn.click();
+        BrowserUtils.waitForPageToLoad(30);
+    }
+
+    public void login(String username1, String password1) {
+        Driver.getDriver().get(Config.getProperty("url"));
+        BrowserUtils.waitForPageToLoad(30);
+        username.sendKeys(username1);
+        password.sendKeys(password1);
         signIn.click();
         BrowserUtils.waitForPageToLoad(30);
     }

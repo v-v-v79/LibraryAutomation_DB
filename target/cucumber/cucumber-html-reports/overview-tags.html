@@ -48,32 +48,32 @@ $(document).ready(function() {
 $(document).ready(function() {
 
     var chartData = {
-        labels:  [ "@snippets", ] ,
+        labels:  [ "@db",  "@login",  "@ui", ] ,
         datasets: [
             {
                 label: "Passed",
                 backgroundColor: "#92DD96",
-                data:  [ 0.00, ] 
+                data:  [ 100.00,  100.00,  100.00, ] 
             },
             {
                 label: "Failed",
                 backgroundColor: "#F2928C",
-                data:  [ 0.00, ] 
+                data:  [ 0.00,  0.00,  0.00, ] 
             },
             {
                 label: "Skipped",
                 backgroundColor: "#8AF",
-                data:  [ 66.67, ] 
+                data:  [ 0.00,  0.00,  0.00, ] 
             },
             {
                 label: "Pending",
                 backgroundColor: "#F5F28F",
-                data:  [ 0.00, ] 
+                data:  [ 0.00,  0.00,  0.00, ] 
             },
             {
                 label: "Undefined",
                 backgroundColor: "#F5B975",
-                data:  [ 33.33, ] 
+                data:  [ 0.00,  0.00,  0.00, ] 
             }
         ]
     };
@@ -133,7 +133,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>28 Nov 2022, 16:46</td>
+      <td>29 Nov 2022, 08:08</td>
     </tr>
   </tbody>
 </table>
@@ -195,54 +195,88 @@ $(document).ready(function() {
 
   <tbody>
       <tr>
-        <td class="tagname"><a href="report-tag_2948330293.html">@snippets</a></td>
+        <td class="tagname"><a href="report-tag_2147548349.html">@db</a></td>
 
+        <td      class="passed"    >12</td>
         <td >0</td>
         <td >0</td>
-        <td     class="skipped"   >2</td>
         <td >0</td>
-        <td   class="undefined" >1</td>
-        <td class="total">3</td>
+        <td >0</td>
+        <td class="total">12</td>
 
+        <td  class="passed"    >4</td>
         <td >0</td>
-        <td  class="failed"    >1</td>
-        <td class="total">1</td>
+        <td class="total">4</td>
 
-        <td class="duration" data-value="646000">0.000</td>
-        <td class="failed">Failed</td>
+        <td class="duration" data-value="27012858000">27.012</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-tag_4082898728.html">@login</a></td>
+
+        <td      class="passed"    >12</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">12</td>
+
+        <td  class="passed"    >4</td>
+        <td >0</td>
+        <td class="total">4</td>
+
+        <td class="duration" data-value="27012858000">27.012</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-tag_2147548883.html">@ui</a></td>
+
+        <td      class="passed"    >12</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">12</td>
+
+        <td  class="passed"    >4</td>
+        <td >0</td>
+        <td class="total">4</td>
+
+        <td class="duration" data-value="27012858000">27.012</td>
+        <td class="passed">Passed</td>
       </tr>
   </tbody>
 
   <tfoot class="total">
     <tr>
       <td></td>
+      <td>36</td>
       <td>0</td>
       <td>0</td>
-      <td>2</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
+      <td>36</td>
+
+      <td>12</td>
+      <td>0</td>
+      <td>12</td>
+
+      <td class="duration">1:21.038</td>
       <td>3</td>
-
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-
-      <td class="duration">0.000</td>
-      <td>1</td>
     </tr>
     <tr>
       <td></td>
-      <td>0.00%</td>
-      <td>0.00%</td>
-      <td>66.67%</td>
-      <td>0.00%</td>
-      <td>33.33%</td>
-      <td></td>
-      <td>0.00%</td>
       <td>100.00%</td>
-      <td></td>
-      <td></td>
       <td>0.00%</td>
+      <td>0.00%</td>
+      <td>0.00%</td>
+      <td>0.00%</td>
+      <td></td>
+      <td>100.00%</td>
+      <td>0.00%</td>
+      <td></td>
+      <td></td>
+      <td>100.00%</td>
     </tr>
   </tfoot>
 </table>

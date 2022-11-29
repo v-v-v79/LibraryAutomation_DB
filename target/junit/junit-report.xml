@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="0.384">
-    <testcase classname="As a librarian, I want to know what genre of books is being borrowed the most" name="verify the common book genre that’s being borrowed" time="0.039">
-        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given Establish the database connection.....................................undefined
-When I execute query to find most popular book genre........................skipped
-Then verify "Action and Adventure" is the most popular book genre...........skipped
-]]></failure>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="43.17">
+    <testcase classname="Login Functionality" name="Login with valid credentials DDT" time="14.017">
+        <system-out><![CDATA[Given the user logged in  "librarian55@library" and "67UQi3Ol"..............passed
+When user gets username  from user fields...................................passed
+Then the username should be same with database..............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Login Functionality" name="Login with valid credentials DDT 2" time="9.691">
+        <system-out><![CDATA[Given the user logged in  "librarian56@library" and "pBQnq0NN"..............passed
+When user gets username  from user fields...................................passed
+Then the username should be same with database..............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Login Functionality" name="Login with valid credentials DDT 3" time="9.566">
+        <system-out><![CDATA[Given the user logged in  "student5@library" and "i1oDgf2d".................passed
+When user gets username  from user fields...................................passed
+Then the username should be same with database..............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Login Functionality" name="Login with valid credentials DDT 4" time="9.595">
+        <system-out><![CDATA[Given the user logged in  "student6@library" and "NXhpXJdC".................passed
+When user gets username  from user fields...................................passed
+Then the username should be same with database..............................passed
+]]></system-out>
     </testcase>
 </testsuite>
