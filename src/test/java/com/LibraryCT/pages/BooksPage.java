@@ -2,6 +2,7 @@ package com.LibraryCT.pages;
 
 import com.LibraryCT.utility.Driver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -77,9 +78,11 @@ public class BooksPage {
         return Driver.getDriver().findElement(By.xpath(xPath));
     }
 
-    public WebElement editBookBtnByOtherFilters(String filter) {
+    public void editBookBtnByOtherFilters(String filter) {
         String xPath = "//td[.='" + filter + "']/..//a[@role='button']";
-        return Driver.getDriver().findElement(By.xpath(xPath));
+        JavascriptExecutor js = (JavascriptExecutor)Driver.getDriver();
+        WebElement bookEdit = Driver.getDriver().findElement(By.xpath(xPath));
+        js.executeScript("arguments[0].click()", bookEdit);
     }
 
     /**Select book category or users table length (5,10,15,50,100,200,500)*/
@@ -89,6 +92,11 @@ public class BooksPage {
             input = input + "";
         Select select = new Select(element);
         select.selectByVisibleText(input);
+    }
+
+    public String getCurrentSelectionText(WebElement element) {
+        Select select = new Select(element);
+        return select.getFirstSelectedOption().getText();
     }
     public List<String> getSelectionAllInBooks(WebElement element) {
         Select select = new Select(element);

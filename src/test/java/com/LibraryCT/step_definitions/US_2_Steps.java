@@ -31,6 +31,6 @@ public class US_2_Steps {
         Assert.assertEquals(db_borrowedBooksCount, borrowedBooksUI);
         dashboardPage.userIcon.click();
         BrowserUtils.waitFor(3);
-        dashboardPage.logOut.click();
+        dashboardPage.logOutBtn.click();
     }
 }

@@ -1,6 +1,7 @@
 package com.LibraryCT.pages;
 
 import com.LibraryCT.utility.Driver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -33,7 +34,12 @@ public class DashboardPage {
     public WebElement userIcon;
 
     @FindBy(xpath = "//a[.='Log Out']")
-    public WebElement logOut;
+    public WebElement logOutBtn;
+
+    public void navigateModule(String moduleName){
+        Driver.getDriver().findElement
+                (By.xpath("//span[@class='title'][.='"+moduleName+"']")).click();
+    }
 
     public String getStats(WebElement element) {
         return element.getText();

@@ -14,12 +14,12 @@ import org.openqa.selenium.TakesScreenshot;
 
 public class Hooks {
 
-    @Before
+    @Before("@ui")
     public void setUp() {
         Driver.getDriver();
     }
 
-    @After
+    @After("@ui")
     public void teardownScenario(Scenario scenario) {
         // We will implement taking screenshot in this method
         //System.out.println("It will be closing browser using cucumber @After each scenario");

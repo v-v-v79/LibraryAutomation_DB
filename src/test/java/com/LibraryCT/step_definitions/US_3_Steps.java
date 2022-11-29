@@ -52,8 +52,6 @@ public class US_3_Steps {
         for (int i = 0; i < allBookCat.size(); i++) {
             Assert.assertEquals(bd_allBookCat.get(i), allBookCat.get(i));
         }
-        dashboardPage.userIcon.click();
-        BrowserUtils.waitFor(3);
-        dashboardPage.logOut.click();
+        loginPage.logout();
     }
 }
