@@ -17,7 +17,7 @@ import org.junit.runner.RunWith;
         glue = "com/LibraryCT/step_definitions",
         publish = true,
         dryRun = false,
-        tags = "@login"
+        tags = "@user"
 
 )
 public class CukesRunner {

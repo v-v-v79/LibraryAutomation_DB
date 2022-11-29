@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>29 Nov 2022, 08:08</td>
+      <td>29 Nov 2022, 10:28</td>
     </tr>
   </tbody>
 </table>
@@ -127,18 +127,18 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">@ui</td>
-          <td      class="passed"    >12</td>
+          <td      class="passed"    >8</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
-          <td class="total">12</td>
+          <td class="total">8</td>
 
-          <td  class="passed"    >4</td>
+          <td  class="passed"    >1</td>
           <td >0</td>
-          <td class="total">4</td>
+          <td class="total">1</td>
 
-          <td class="duration" data-value="27012858000">27.012</td>
+          <td class="duration" data-value="50136743000">50.136</td>
           <td class="passed">Passed</td>
         </tr>
         </tbody>
@@ -171,26 +171,26 @@ $(document).ready(function() {
 <div class="element">
     <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_2643917143.html">Login Functionality</a>
+      <a href="report-feature_485567983.html">Users Management</a>
     </div>
 
 
 <div class="tags indention">
     <b>Tags:</b>
-       <a href="report-tag_4082898728.html">@login</a>
-       <a href="report-tag_2147548349.html">@db</a>
+       <a href="report-tag_2210188298.html">@user</a>
        <a href="report-tag_2147548883.html">@ui</a>
+       <a href="report-tag_2147548349.html">@db</a>
 </div>
 
 
-  <span class="lead-duration duration">7.783</span>
+  <span class="lead-duration duration">50.136</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
 
 <div class="brief passed">
-  <span class="keyword indention">Scenario Outline</span>
-  <span class="name">Login with valid credentials DDT</span>
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Updating user status as librarian should change current user status in DB</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -221,7 +221,7 @@ $(document).ready(function() {
             <span class="keyword indention">Before</span>
               <span class="location name">com.LibraryCT.step_definitions.Hooks.setUp()</span>
 
-  <span class="lead-duration duration">4.408</span>
+  <span class="lead-duration duration">3.480</span>
 
           </div>
 
@@ -237,7 +237,7 @@ $(document).ready(function() {
             <span class="keyword indention">Before</span>
               <span class="location name">com.LibraryCT.step_definitions.Hooks.db_connection_setUp()</span>
 
-  <span class="lead-duration duration">1.621</span>
+  <span class="lead-duration duration">1.195</span>
 
           </div>
 
@@ -272,9 +272,36 @@ $(document).ready(function() {
 
 <div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
-  <span class="name">the user logged in  <span class="argument">&quot;librarian55@library&quot;</span> and <span class="argument">&quot;67UQi3Ol&quot;</span></span>
+  <span class="name">the user logged in as <span class="argument">&quot;librarian&quot;</span></span>
 
-  <span class="lead-duration duration">7.625</span>
+  <span class="lead-duration duration">1.276</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">the user navigates to <span class="argument">&quot;Users&quot;</span> page</span>
+
+  <span class="lead-duration duration">7.069</span>
 
 </div>
 
@@ -299,9 +326,63 @@ $(document).ready(function() {
 
 <div class="brief step-name-When passed">
   <span class="keyword indention">When</span>
-  <span class="name">user gets username  from user fields</span>
+  <span class="name">the user clicks Edit User button</span>
 
-  <span class="lead-duration duration">0.029</span>
+  <span class="lead-duration duration">9.160</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">the user changes user status <span class="argument">&quot;ACTIVE&quot;</span> to <span class="argument">&quot;INACTIVE&quot;</span></span>
+
+  <span class="lead-duration duration">7.111</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">the user clicks save changes button</span>
+
+  <span class="lead-duration duration">0.062</span>
 
 </div>
 
@@ -326,9 +407,63 @@ $(document).ready(function() {
 
 <div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
-  <span class="name">the username should be same with database</span>
+  <span class="name"><span class="argument">&quot;The user updated.&quot;</span> message should appear</span>
 
-  <span class="lead-duration duration">0.128</span>
+  <span class="lead-duration duration">0.540</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">the users should see same status for related user in database</span>
+
+  <span class="lead-duration duration">0.174</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">the user changes current user status <span class="argument">&quot;INACTIVE&quot;</span> to <span class="argument">&quot;ACTIVE&quot;</span></span>
+
+  <span class="lead-duration duration">24.741</span>
 
 </div>
 
@@ -373,676 +508,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">com.LibraryCT.step_definitions.Hooks.teardownScenario(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">0.176</span>
-
-          </div>
-
-
-
-
-
-
-
-        </div>
-    </div>
-  </div>
-
-  </div>
-</div>
-
-
-<div class="element">
-    <div class="indention">
-      <b>Feature:</b>
-      <a href="report-feature_2643917143.html">Login Functionality</a>
-    </div>
-
-
-<div class="tags indention">
-    <b>Tags:</b>
-       <a href="report-tag_4082898728.html">@login</a>
-       <a href="report-tag_2147548349.html">@db</a>
-       <a href="report-tag_2147548883.html">@ui</a>
-</div>
-
-
-  <span class="lead-duration duration">6.261</span>
-
-
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-5">
-
-<div class="brief passed">
-  <span class="keyword indention">Scenario Outline</span>
-  <span class="name">Login with valid credentials DDT</span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-5" class="collapse collapsable-details ">
-
-
-  <div class="inner-level hooks-element-before">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-6">
-
-<div class="brief passed">
-  <span class="keyword indention">Hooks</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-    </div>
-
-    <div id="before-6" class="inner-level collapse collapsable-details ">
-        <div class="hook">
-          <div class="brief passed">
-            <span class="keyword indention">Before</span>
-              <span class="location name">com.LibraryCT.step_definitions.Hooks.setUp()</span>
-
-  <span class="lead-duration duration">2.454</span>
-
-          </div>
-
-
-
-
-
-
-
-        </div>
-        <div class="hook">
-          <div class="brief passed">
-            <span class="keyword indention">Before</span>
-              <span class="location name">com.LibraryCT.step_definitions.Hooks.db_connection_setUp()</span>
-
-  <span class="lead-duration duration">0.826</span>
-
-          </div>
-
-
-
-
-
-
-
-        </div>
-    </div>
-  </div>
-
-
-
-<div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-7">
-
-<div class="brief passed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </div>
-
-  <div id="steps-7" class="inner-level collapse collapsable-details ">
-      <div class="step">
-
-
-<div class="brief step-name-Given passed">
-  <span class="keyword indention">Given</span>
-  <span class="name">the user logged in  <span class="argument">&quot;librarian56@library&quot;</span> and <span class="argument">&quot;pBQnq0NN&quot;</span></span>
-
-  <span class="lead-duration duration">6.157</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-When passed">
-  <span class="keyword indention">When</span>
-  <span class="name">user gets username  from user fields</span>
-
-  <span class="lead-duration duration">0.026</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then passed">
-  <span class="keyword indention">Then</span>
-  <span class="name">the username should be same with database</span>
-
-  <span class="lead-duration duration">0.077</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-  </div>
-</div>
-
-
-
-
-  <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-8">
-
-<div class="brief passed">
-  <span class="keyword indention">Hooks</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-    </div>
-
-    <div id="after-8" class="inner-level collapse collapsable-details ">
-        <div class="hook">
-          <div class="brief passed">
-            <span class="keyword indention">After</span>
-              <span class="location name">com.LibraryCT.step_definitions.Hooks.teardownScenario(io.cucumber.java.Scenario)</span>
-
-  <span class="lead-duration duration">0.145</span>
-
-          </div>
-
-
-
-
-
-
-
-        </div>
-    </div>
-  </div>
-
-  </div>
-</div>
-
-
-<div class="element">
-    <div class="indention">
-      <b>Feature:</b>
-      <a href="report-feature_2643917143.html">Login Functionality</a>
-    </div>
-
-
-<div class="tags indention">
-    <b>Tags:</b>
-       <a href="report-tag_4082898728.html">@login</a>
-       <a href="report-tag_2147548349.html">@db</a>
-       <a href="report-tag_2147548883.html">@ui</a>
-</div>
-
-
-  <span class="lead-duration duration">6.443</span>
-
-
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-9">
-
-<div class="brief passed">
-  <span class="keyword indention">Scenario Outline</span>
-  <span class="name">Login with valid credentials DDT</span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-9" class="collapse collapsable-details ">
-
-
-  <div class="inner-level hooks-element-before">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-10">
-
-<div class="brief passed">
-  <span class="keyword indention">Hooks</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-    </div>
-
-    <div id="before-10" class="inner-level collapse collapsable-details ">
-        <div class="hook">
-          <div class="brief passed">
-            <span class="keyword indention">Before</span>
-              <span class="location name">com.LibraryCT.step_definitions.Hooks.setUp()</span>
-
-  <span class="lead-duration duration">2.138</span>
-
-          </div>
-
-
-
-
-
-
-
-        </div>
-        <div class="hook">
-          <div class="brief passed">
-            <span class="keyword indention">Before</span>
-              <span class="location name">com.LibraryCT.step_definitions.Hooks.db_connection_setUp()</span>
-
-  <span class="lead-duration duration">0.814</span>
-
-          </div>
-
-
-
-
-
-
-
-        </div>
-    </div>
-  </div>
-
-
-
-<div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-11">
-
-<div class="brief passed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </div>
-
-  <div id="steps-11" class="inner-level collapse collapsable-details ">
-      <div class="step">
-
-
-<div class="brief step-name-Given passed">
-  <span class="keyword indention">Given</span>
-  <span class="name">the user logged in  <span class="argument">&quot;student5@library&quot;</span> and <span class="argument">&quot;i1oDgf2d&quot;</span></span>
-
-  <span class="lead-duration duration">6.337</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-When passed">
-  <span class="keyword indention">When</span>
-  <span class="name">user gets username  from user fields</span>
-
-  <span class="lead-duration duration">0.025</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then passed">
-  <span class="keyword indention">Then</span>
-  <span class="name">the username should be same with database</span>
-
-  <span class="lead-duration duration">0.079</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-  </div>
-</div>
-
-
-
-
-  <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-12">
-
-<div class="brief passed">
-  <span class="keyword indention">Hooks</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-    </div>
-
-    <div id="after-12" class="inner-level collapse collapsable-details ">
-        <div class="hook">
-          <div class="brief passed">
-            <span class="keyword indention">After</span>
-              <span class="location name">com.LibraryCT.step_definitions.Hooks.teardownScenario(io.cucumber.java.Scenario)</span>
-
-  <span class="lead-duration duration">0.163</span>
-
-          </div>
-
-
-
-
-
-
-
-        </div>
-    </div>
-  </div>
-
-  </div>
-</div>
-
-
-<div class="element">
-    <div class="indention">
-      <b>Feature:</b>
-      <a href="report-feature_2643917143.html">Login Functionality</a>
-    </div>
-
-
-<div class="tags indention">
-    <b>Tags:</b>
-       <a href="report-tag_4082898728.html">@login</a>
-       <a href="report-tag_2147548349.html">@db</a>
-       <a href="report-tag_2147548883.html">@ui</a>
-</div>
-
-
-  <span class="lead-duration duration">6.524</span>
-
-
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-13">
-
-<div class="brief passed">
-  <span class="keyword indention">Scenario Outline</span>
-  <span class="name">Login with valid credentials DDT</span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-13" class="collapse collapsable-details ">
-
-
-  <div class="inner-level hooks-element-before">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-14">
-
-<div class="brief passed">
-  <span class="keyword indention">Hooks</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-    </div>
-
-    <div id="before-14" class="inner-level collapse collapsable-details ">
-        <div class="hook">
-          <div class="brief passed">
-            <span class="keyword indention">Before</span>
-              <span class="location name">com.LibraryCT.step_definitions.Hooks.setUp()</span>
-
-  <span class="lead-duration duration">2.099</span>
-
-          </div>
-
-
-
-
-
-
-
-        </div>
-        <div class="hook">
-          <div class="brief passed">
-            <span class="keyword indention">Before</span>
-              <span class="location name">com.LibraryCT.step_definitions.Hooks.db_connection_setUp()</span>
-
-  <span class="lead-duration duration">0.810</span>
-
-          </div>
-
-
-
-
-
-
-
-        </div>
-    </div>
-  </div>
-
-
-
-<div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-15">
-
-<div class="brief passed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </div>
-
-  <div id="steps-15" class="inner-level collapse collapsable-details ">
-      <div class="step">
-
-
-<div class="brief step-name-Given passed">
-  <span class="keyword indention">Given</span>
-  <span class="name">the user logged in  <span class="argument">&quot;student6@library&quot;</span> and <span class="argument">&quot;NXhpXJdC&quot;</span></span>
-
-  <span class="lead-duration duration">6.422</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-When passed">
-  <span class="keyword indention">When</span>
-  <span class="name">user gets username  from user fields</span>
-
-  <span class="lead-duration duration">0.023</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then passed">
-  <span class="keyword indention">Then</span>
-  <span class="name">the username should be same with database</span>
-
-  <span class="lead-duration duration">0.078</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-  </div>
-</div>
-
-
-
-
-  <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-16">
-
-<div class="brief passed">
-  <span class="keyword indention">Hooks</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-    </div>
-
-    <div id="after-16" class="inner-level collapse collapsable-details ">
-        <div class="hook">
-          <div class="brief passed">
-            <span class="keyword indention">After</span>
-              <span class="location name">com.LibraryCT.step_definitions.Hooks.teardownScenario(io.cucumber.java.Scenario)</span>
-
-  <span class="lead-duration duration">0.156</span>
+  <span class="lead-duration duration">0.193</span>
 
           </div>
 

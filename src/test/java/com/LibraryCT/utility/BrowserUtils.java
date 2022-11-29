@@ -521,4 +521,9 @@ public class BrowserUtils {
 
         Assert.assertEquals(expectedTitle, actualTitle);
     }
+
+    public static void selectByVisibleText(WebElement element, String option) {
+        Select select = new Select(element);
+        select.selectByVisibleText(option);
+    }
 }

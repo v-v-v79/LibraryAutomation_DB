@@ -2,6 +2,7 @@ package com.LibraryCT.pages;
 
 import com.LibraryCT.utility.Driver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -76,24 +77,38 @@ public class UsersPage {
     @FindBy(xpath = "//th[.='Status']")
     public WebElement sortASCbyStatus;
 
+    @FindBy(xpath = "//div[@class='toast-message']")
+    public WebElement toastMessage;
+
 
     public WebElement editUserBtn(String userID) {
-        String xPath = "//a[@onclick='Users.edit_user(" + userID +"']";
+        String xPath = "//a[@onclick = 'Users.edit_user(" + userID + ")']";
         return Driver.getDriver().findElement(By.xpath(xPath));
     }
 
-    /**Select user type (librarian or student), user status (active or inactive)
-    users table length (5,10,15,50,100,200,500)*/
-    public void selectionOneInUsers(String input, WebElement element) {
+    public void editUserBtnByOtherFilters(String filter) {
+        String xPath = "//td[.='" + filter + "']/..//a[@role='button']";
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        WebElement userEdit = Driver.getDriver().findElement(By.xpath(xPath));
+        js.executeScript("arguments[0].click()", userEdit);
+    }
+
+    /**
+     * Select user type (librarian or student), user status (active or inactive)
+     * users table length (5,10,15,50,100,200,500)
+     */
+    public void selectionOneInUsers(WebElement element, String input) {
         String tableLength = "5,10,15,50,100,200,500";
-        if(tableLength.contains(input))
+        if (tableLength.contains(input))
             input = input + "";
-        switch (input) {
-            case "student" -> input = "Students";
-            case "librarian" -> input = "Librarian";
-            case "active" -> input = "ACTIVE";
-            case "inactive" -> input = "INACTIVE";
-            default -> System.out.println("WRONG INPUT OF USER TYPE IN ADDING USER MODULE");
+        else {
+            switch (input) {
+                case "student" -> input = "Students";
+                case "librarian" -> input = "Librarian";
+                case "active" -> input = "ACTIVE";
+                case "inactive" -> input = "INACTIVE";
+                default -> System.out.println("WRONG INPUT OF USER TYPE IN ADDING USER MODULE");
+            }
         }
         Select select = new Select(element);
         select.selectByVisibleText(input);
@@ -102,5 +117,9 @@ public class UsersPage {
     public List<WebElement> getSelectionAllInUsers(WebElement element) {
         Select select = new Select(element);
         return select.getOptions();
+    }
+    public String getCurrentSelectionInUsers(WebElement element) {
+        Select select = new Select(element);
+        return select.getFirstSelectedOption().getAttribute("value");
     }
 }
