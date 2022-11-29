@@ -10,6 +10,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 public class Driver {
 
@@ -30,20 +31,17 @@ public class Driver {
             switch (browser) {
                 case "remote-chrome":
                     try {
-
-
                         String gridAddress = "localhost";
                         URL url = new URL("http://" + gridAddress + ":4444/wd/hub");
                         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
                         desiredCapabilities.setBrowserName("chrome");
                         driverPool.set(new RemoteWebDriver(url, desiredCapabilities));
-
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
                     break;
-                case "remote-firefox":
 
+                case "remote-firefox":
                     try {
                         String gridAddress = "localhost";
                         URL url = new URL("http://" + gridAddress + ":4444/wd/hub");
@@ -54,20 +52,26 @@ public class Driver {
                         e.printStackTrace();
                     }
                     break;
+
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
                     driverPool.set(new ChromeDriver());
-
+                    driverPool.get().manage().window().maximize();
+                    driverPool.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                     break;
+
                 case "chrome-headless":
                     WebDriverManager.chromedriver().setup();
                     driverPool.set(new ChromeDriver(new ChromeOptions().setHeadless(true)));
-
                     break;
+
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
                     driverPool.set((new FirefoxDriver()));
+                    driverPool.get().manage().window().maximize();
+                    driverPool.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                     break;
+
                 case "firefox-headless":
                     WebDriverManager.firefoxdriver().setup();
                     driverPool.set(new FirefoxDriver(new FirefoxOptions().setHeadless(true)));
@@ -78,8 +82,8 @@ public class Driver {
         return driverPool.get();
     }
 
-    public static void closeDriver(){
-        if(driverPool.get()!=null) {
+    public static void closeDriver() {
+        if (driverPool.get() != null) {
             driverPool.get().quit();
             driverPool.remove();
         }
