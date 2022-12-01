@@ -1,4 +1,4 @@
-@login
+@wip
 Feature: Login Functionality
   @db @ui
   Scenario Outline: Login with valid credentials DDT

@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="55.316">
-    <testcase classname="Users Management" name="Updating user status as librarian should change current user status in DB" time="55.039">
-        <system-out><![CDATA[Given the user logged in as "librarian".....................................passed
-And the user navigates to "Users" page......................................passed
-When the user clicks Edit User button.......................................passed
-And the user changes user status "ACTIVE" to "INACTIVE".....................passed
-And the user clicks save changes button.....................................passed
-Then "The user updated." message should appear..............................passed
-And the users should see same status for related user in database...........passed
-And the user changes current user status "INACTIVE" to "ACTIVE".............passed
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="2.134">
+    <testcase classname="As a librarian, I want to know what genre of books is being borrowed the most" name="Verify the common book genre that’s being borrowed" time="1.821">
+        <system-out><![CDATA[Given Establish the database connection.....................................passed
+When I execute query to find most popular book genre........................passed
+Then verify "Action and Adventure" is the most popular book genre...........passed
 ]]></system-out>
     </testcase>
 </testsuite>
