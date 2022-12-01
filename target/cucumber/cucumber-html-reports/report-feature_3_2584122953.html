@@ -41,7 +41,7 @@ $(document).ready(function() {
 
 
 
-<title>Cucumber Reports  - Feature: As a data consumer, I want the user information are stored in mySql DB correctly in users table.</title>
+<title>Cucumber Reports  - Feature: As a data consumer, I want UI and DB book information are match.</title>
 
 </head>
 <body>
@@ -126,7 +126,7 @@ $(document).ready(function() {
 
         <tbody>
         <tr>
-          <td class="tagname">As a data consumer, I want the user information are stored in mySql DB correctly in users table.</td>
+          <td class="tagname">As a data consumer, I want UI and DB book information are match.</td>
           <td      class="passed"    >4</td>
           <td >0</td>
           <td >0</td>
@@ -138,7 +138,7 @@ $(document).ready(function() {
           <td >0</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="278278000">0.278</td>
+          <td class="duration" data-value="23681422000">23.681</td>
           <td class="passed">Passed</td>
         </tr>
         </tbody>
@@ -173,7 +173,7 @@ $(document).ready(function() {
 
 <div class="brief passed">
   <span class="keyword indention">Feature</span>
-  <span class="name">As a data consumer, I want the user information are stored in mySql DB correctly in users table.</span>
+  <span class="name">As a data consumer, I want UI and DB book information are match.</span>
 
 
 </div>
@@ -187,20 +187,21 @@ $(document).ready(function() {
 
 <div class="tags indention">
     <b>Tags:</b>
-       <a href="report-tag_1684726137.html">@TS4-222</a>
+       <a href="report-tag_1684726143.html">@TS4-228</a>
        <a href="report-tag_977293835.html">@LibraryCT</a>
+       <a href="report-tag_2147548883.html">@ui</a>
        <a href="report-tag_2147548349.html">@db</a>
 </div>
 
 
-  <span class="lead-duration duration">0.278</span>
+  <span class="lead-duration duration">23.681</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">Verify users has unique IDs  and Verify users table columns</span>
+  <span class="name">Verify book information with DB</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -231,7 +232,23 @@ $(document).ready(function() {
             <span class="keyword indention">Before</span>
               <span class="location name">com.LibraryCT.step_definitions.Hooks.db_connection_setUp()</span>
 
-  <span class="lead-duration duration">1.545</span>
+  <span class="lead-duration duration">1.547</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+              <span class="location name">com.LibraryCT.step_definitions.Hooks.setUp()</span>
+
+  <span class="lead-duration duration">2.653</span>
 
           </div>
 
@@ -264,38 +281,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-When passed">
-  <span class="keyword indention">When</span>
-  <span class="name">Execute query to get all IDs from users</span>
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">I login as <span class="argument">&quot;librarian&quot;</span></span>
 
-  <span class="lead-duration duration">0.181</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then passed">
-  <span class="keyword indention">Then</span>
-  <span class="name">verify all users has unique ID</span>
-
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">6.068</span>
 
 </div>
 
@@ -320,9 +310,36 @@ $(document).ready(function() {
 
 <div class="brief step-name-When passed">
   <span class="keyword indention">When</span>
-  <span class="name">Execute query to get all columns</span>
+  <span class="name">I navigate to <span class="argument">&quot;Books&quot;</span> page</span>
 
-  <span class="lead-duration duration">0.082</span>
+  <span class="lead-duration duration">3.057</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">I open book <span class="argument">&quot;Chordeiles minor&quot;</span></span>
+
+  <span class="lead-duration duration">11.129</span>
 
 </div>
 
@@ -347,9 +364,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
-  <span class="name">verify the below columns are listed in result</span>
+  <span class="name">book information must match the Database</span>
 
-  <span class="lead-duration duration">0.012</span>
+  <span class="lead-duration duration">3.425</span>
 
 </div>
 
@@ -359,44 +376,6 @@ $(document).ready(function() {
 
 
 
-          <table class="step-arguments">
-              <tr>
-                  <td>id</td>
-              </tr>
-              <tr>
-                  <td>full_name</td>
-              </tr>
-              <tr>
-                  <td>email</td>
-              </tr>
-              <tr>
-                  <td>password</td>
-              </tr>
-              <tr>
-                  <td>user_group_id</td>
-              </tr>
-              <tr>
-                  <td>image</td>
-              </tr>
-              <tr>
-                  <td>extra_data</td>
-              </tr>
-              <tr>
-                  <td>status</td>
-              </tr>
-              <tr>
-                  <td>is_admin</td>
-              </tr>
-              <tr>
-                  <td>start_date</td>
-              </tr>
-              <tr>
-                  <td>end_date</td>
-              </tr>
-              <tr>
-                  <td>address</td>
-              </tr>
-          </table>
 
 
 
@@ -413,6 +392,38 @@ $(document).ready(function() {
 
 
 
+  <div class="inner-level hooks-element-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-4">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-4" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">com.LibraryCT.step_definitions.Hooks.teardownScenario(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">0.091</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
 
   </div>
 </div>

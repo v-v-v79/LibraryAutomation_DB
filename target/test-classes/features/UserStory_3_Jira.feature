@@ -1,7 +1,7 @@
-@wip
 Feature: As a data consumer, I want UI and DB book categories are match.
+  @TS4-225 @LibraryCT
   @ui @db
-  Scenario: verify book categories with DB
+  Scenario: Verify book categories with DB
     Given I login as a "librarian"
     When I navigate to Books page
     And I take all book categories in UI

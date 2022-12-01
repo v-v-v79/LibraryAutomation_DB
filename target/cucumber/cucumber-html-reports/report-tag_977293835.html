@@ -41,7 +41,7 @@ $(document).ready(function() {
 
 
 
-<title>Cucumber Reports  - Tag: @ui</title>
+<title>Cucumber Reports  - Tag: @LibraryCT</title>
 
 </head>
 <body>
@@ -126,19 +126,19 @@ $(document).ready(function() {
 
         <tbody>
         <tr>
-          <td class="tagname">@ui</td>
-          <td      class="passed"    >12</td>
+          <td class="tagname">@LibraryCT</td>
+          <td      class="passed"    >19</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
-          <td class="total">12</td>
+          <td class="total">19</td>
 
-          <td  class="passed"    >3</td>
+          <td  class="passed"    >5</td>
           <td >0</td>
-          <td class="total">3</td>
+          <td class="total">5</td>
 
-          <td class="duration" data-value="50218027000">50.218</td>
+          <td class="duration" data-value="50588588000">50.588</td>
           <td class="passed">Passed</td>
         </tr>
         </tbody>
@@ -171,27 +171,26 @@ $(document).ready(function() {
 <div class="element">
     <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_1_3595240203.html">As a librarian, I want to know borrowed books number</a>
+      <a href="report-feature_4100798828.html">As a data consumer, I want the user information are stored in mySql DB correctly in users table.</a>
     </div>
 
 
 <div class="tags indention">
     <b>Tags:</b>
-       <a href="report-tag_1684726113.html">@TS4-219</a>
+       <a href="report-tag_1684726137.html">@TS4-222</a>
        <a href="report-tag_977293835.html">@LibraryCT</a>
-       <a href="report-tag_2147548883.html">@ui</a>
        <a href="report-tag_2147548349.html">@db</a>
 </div>
 
 
-  <span class="lead-duration duration">10.875</span>
+  <span class="lead-duration duration">0.278</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">Verify the total amount of borrowed books</span>
+  <span class="name">Verify users has unique IDs  and Verify users table columns</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -217,6 +216,247 @@ $(document).ready(function() {
     </div>
 
     <div id="before-2" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+              <span class="location name">com.LibraryCT.step_definitions.Hooks.db_connection_setUp()</span>
+
+  <span class="lead-duration duration">1.545</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-3">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-3" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">Execute query to get all IDs from users</span>
+
+  <span class="lead-duration duration">0.181</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">verify all users has unique ID</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">Execute query to get all columns</span>
+
+  <span class="lead-duration duration">0.082</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">verify the below columns are listed in result</span>
+
+  <span class="lead-duration duration">0.012</span>
+
+</div>
+
+
+
+
+
+
+
+          <table class="step-arguments">
+              <tr>
+                  <td>id</td>
+              </tr>
+              <tr>
+                  <td>full_name</td>
+              </tr>
+              <tr>
+                  <td>email</td>
+              </tr>
+              <tr>
+                  <td>password</td>
+              </tr>
+              <tr>
+                  <td>user_group_id</td>
+              </tr>
+              <tr>
+                  <td>image</td>
+              </tr>
+              <tr>
+                  <td>extra_data</td>
+              </tr>
+              <tr>
+                  <td>status</td>
+              </tr>
+              <tr>
+                  <td>is_admin</td>
+              </tr>
+              <tr>
+                  <td>start_date</td>
+              </tr>
+              <tr>
+                  <td>end_date</td>
+              </tr>
+              <tr>
+                  <td>address</td>
+              </tr>
+          </table>
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_1_3595240203.html">As a librarian, I want to know borrowed books number</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_1684726113.html">@TS4-219</a>
+       <a href="report-tag_977293835.html">@LibraryCT</a>
+       <a href="report-tag_2147548883.html">@ui</a>
+       <a href="report-tag_2147548349.html">@db</a>
+</div>
+
+
+  <span class="lead-duration duration">10.875</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-4">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Verify the total amount of borrowed books</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-4" class="collapse collapsable-details ">
+
+
+  <div class="inner-level hooks-element-before">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-5">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="before-5" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">Before</span>
@@ -255,7 +495,7 @@ $(document).ready(function() {
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-3">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-6">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -267,7 +507,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-3" class="inner-level collapse collapsable-details ">
+  <div id="steps-6" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -356,7 +596,7 @@ $(document).ready(function() {
 
 
   <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-4">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-7">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -368,7 +608,7 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="after-4" class="inner-level collapse collapsable-details ">
+    <div id="after-7" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
@@ -411,7 +651,7 @@ $(document).ready(function() {
   <span class="lead-duration duration">15.660</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-5">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-8">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -424,11 +664,11 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-5" class="collapse collapsable-details ">
+  <div id="element-8" class="collapse collapsable-details ">
 
 
   <div class="inner-level hooks-element-before">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-6">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-9">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -440,7 +680,7 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="before-6" class="inner-level collapse collapsable-details ">
+    <div id="before-9" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">Before</span>
@@ -479,7 +719,7 @@ $(document).ready(function() {
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-7">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-10">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -491,7 +731,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-7" class="inner-level collapse collapsable-details ">
+  <div id="steps-10" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -634,7 +874,7 @@ $(document).ready(function() {
 
 
   <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-8">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-11">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -646,7 +886,7 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="after-8" class="inner-level collapse collapsable-details ">
+    <div id="after-11" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
@@ -689,7 +929,7 @@ $(document).ready(function() {
   <span class="lead-duration duration">23.681</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-9">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-12">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -702,11 +942,11 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-9" class="collapse collapsable-details ">
+  <div id="element-12" class="collapse collapsable-details ">
 
 
   <div class="inner-level hooks-element-before">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-10">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-13">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -718,7 +958,7 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="before-10" class="inner-level collapse collapsable-details ">
+    <div id="before-13" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">Before</span>
@@ -757,7 +997,7 @@ $(document).ready(function() {
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-11">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-14">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -769,7 +1009,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-11" class="inner-level collapse collapsable-details ">
+  <div id="steps-14" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -885,7 +1125,7 @@ $(document).ready(function() {
 
 
   <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-12">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-15">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -897,7 +1137,7 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="after-12" class="inner-level collapse collapsable-details ">
+    <div id="after-15" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
@@ -916,6 +1156,181 @@ $(document).ready(function() {
         </div>
     </div>
   </div>
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_4_2078564328.html">As a librarian, I want to know what genre of books is being borrowed the most</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_1684726167.html">@TS4-231</a>
+       <a href="report-tag_977293835.html">@LibraryCT</a>
+       <a href="report-tag_2147548349.html">@db</a>
+</div>
+
+
+  <span class="lead-duration duration">0.092</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-16">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Verify the common book genre that&rsquo;s being borrowed</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-16" class="collapse collapsable-details ">
+
+
+  <div class="inner-level hooks-element-before">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-17">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="before-17" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+              <span class="location name">com.LibraryCT.step_definitions.Hooks.db_connection_setUp()</span>
+
+  <span class="lead-duration duration">0.867</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-18">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-18" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">Establish the database connection</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">I execute query to find most popular book genre</span>
+
+  <span class="lead-duration duration">0.089</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">verify <span class="argument">&quot;Action and Adventure&quot;</span> is the most popular book genre.</span>
+
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
 
   </div>
 </div>

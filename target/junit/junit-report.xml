@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="2.134">
-    <testcase classname="As a librarian, I want to know what genre of books is being borrowed the most" name="Verify the common book genre that’s being borrowed" time="1.821">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="5" time="28.23">
+    <testcase classname="As a data consumer, I want the user information are stored in mySql DB correctly in users table." name="Verify users has unique IDs  and Verify users table columns" time="1.834">
+        <system-out><![CDATA[When Execute query to get all IDs from users................................passed
+Then verify all users has unique ID.........................................passed
+When Execute query to get all columns.......................................passed
+Then verify the below columns are listed in result..........................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="As a librarian, I want to know borrowed books number" name="Verify the total amount of borrowed books" time="15.19">
+        <system-out><![CDATA[Given user login as a "librarian"...........................................passed
+When user take borrowed books number........................................passed
+Then borrowed books number information must match with DB...................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="As a data consumer, I want UI and DB book categories are match." name="Verify book categories with DB" time="20.493">
+        <system-out><![CDATA[Given I login as a "librarian"..............................................passed
+When I navigate to Books page...............................................passed
+And I take all book categories in UI........................................passed
+And I execute query to get book categories..................................passed
+Then verify book categories must match book_categories table from db........passed
+]]></system-out>
+    </testcase>
+    <testcase classname="As a data consumer, I want UI and DB book information are match." name="Verify book information with DB" time="27.986">
+        <system-out><![CDATA[Given I login as "librarian"................................................passed
+When I navigate to "Books" page.............................................passed
+When I open book "Chordeiles minor".........................................passed
+Then book information must match the Database...............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="As a librarian, I want to know what genre of books is being borrowed the most" name="Verify the common book genre that’s being borrowed" time="0.962">
         <system-out><![CDATA[Given Establish the database connection.....................................passed
 When I execute query to find most popular book genre........................passed
 Then verify "Action and Adventure" is the most popular book genre...........passed
